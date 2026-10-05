@@ -41,7 +41,7 @@ SDMXWS = "https://esploradati.istat.it/SDMXWS/rest/"
 CARTELLA = os.path.join(os.path.dirname(os.path.abspath(__file__)), "dati")
 ANNO_INIZIO = 2018
 # province lombarde con i codici ISTAT (CL_ITTER107) usati dalle tavole della popolazione
-PROVINCE = ["ITC41", "ITC42", "ITC44", "ITC4C", "ITC46", "ITC47", "ITC48", "ITC4A", "ITC4B", "ITC43", "ITC49", "ITC4D"]
+PROVINCE = ["ITC41", "ITC42", "ITC44", "ITC45", "ITC46", "ITC47", "ITC48", "ITC4A", "ITC4B", "ITC43", "ITC49", "IT108"]
 AREE = ["IT", "ITC4"] + PROVINCE          # Italia, Lombardia, province lombarde (ISTAT: Italia = IT)
 TRE_AREE = ["IT", "ITC4", "ITC41"]        # Italia, Lombardia, Varese
 INDICI = ["TFR", "LIFEEXP0M", "LIFEEXP0F", "DEPENDRATE", "OLDAGEDEPR", "AGEINDEX", "MEANAGEP"]
