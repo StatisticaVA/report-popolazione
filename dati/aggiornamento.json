@@ -1,7 +1,7 @@
 {
  "popolazione_residenti": {
   "nome": "Popolazione residente al 1° gennaio, per sesso (ISTAT)",
-  "scaricato": "2026-10-05T10:04:18Z",
+  "scaricato": "2026-10-05T10:08:14Z",
   "ultimo_anno": 2026,
   "righe": 336,
   "ultimo_aggiornamento_istat": "2026-03-31T08:03:43.724Z",
@@ -9,7 +9,7 @@
  },
  "popolazione_eta": {
   "nome": "Popolazione residente di Varese per singola età (ISTAT)",
-  "scaricato": "2026-10-05T10:04:18Z",
+  "scaricato": "2026-10-05T10:08:14Z",
   "ultimo_anno": 2026,
   "righe": 816,
   "ultimo_aggiornamento_istat": "2026-03-31T08:03:43.724Z",
@@ -17,7 +17,7 @@
  },
  "popolazione_stranieri": {
   "nome": "Popolazione straniera residente al 1° gennaio, per singola età (ISTAT)",
-  "scaricato": "2026-10-05T10:04:18Z",
+  "scaricato": "2026-10-05T10:08:14Z",
   "ultimo_anno": 2026,
   "righe": 2448,
   "ultimo_aggiornamento_istat": "2026-03-31T15:18:45.475Z",
@@ -25,7 +25,7 @@
  },
  "popolazione_serie_storica": {
   "nome": "Popolazione residente di Varese 2002-2019, ricostruzione intercensuaria (ISTAT)",
-  "scaricato": "2026-10-05T10:04:18Z",
+  "scaricato": "2026-10-05T10:08:14Z",
   "ultimo_anno": 2019,
   "righe": 18,
   "ultimo_aggiornamento_istat": "2023-01-27T11:14:38.852Z",
@@ -33,11 +33,19 @@
  },
  "popolazione_indici": {
   "nome": "Indicatori demografici (ISTAT)",
-  "scaricato": "2026-10-05T10:04:18Z",
+  "scaricato": "2026-10-05T10:08:14Z",
   "ultimo_anno": 2026,
   "righe": 180,
   "ultimo_aggiornamento_istat": "2026-03-31T07:58:36.992Z",
   "dati_modificati": "2026-10-05T10:04:18Z"
  },
- "controllato": "2026-10-05T10:04:18Z"
+ "controllato": "2026-10-05T10:08:14Z",
+ "popolazione_bilancio": {
+  "nome": "Bilancio demografico di Varese: saldo naturale e migratorio estero (ISTAT)",
+  "scaricato": "2026-10-05T10:08:14Z",
+  "ultimo_anno": 2025,
+  "righe": 20,
+  "ultimo_aggiornamento_istat": "2026-07-29T13:33:40.079Z",
+  "dati_modificati": "2026-10-05T10:08:14Z"
+ }
 }
