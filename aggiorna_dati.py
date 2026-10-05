@@ -48,6 +48,7 @@ INDICI = ["TFR", "LIFEEXP0M", "LIFEEXP0F", "DEPENDRATE", "OLDAGEDEPR", "AGEINDEX
 BILANCIO = ["NTGROW_REGOF", "INTERTNMIG_REGOF", "TOTAL_BAL"]
 
 COLONNE = ["DATAFLOW", "REF_AREA", "DATA_TYPE", "SEX", "AGE", "TIME_PERIOD", "OBS_VALUE", "OBS_STATUS"]
+COLONNE_BILANCIO = ["DATAFLOW", "REF_AREA", "DATA_TYPE", "SEX", "TIME_PERIOD", "OBS_VALUE", "OBS_STATUS"]
 COLONNE_INDICI = ["DATAFLOW", "REF_AREA", "DATA_TYPE", "TIME_PERIOD", "OBS_VALUE", "OBS_STATUS"]
 TAVOLE = [
     {"codice": "popolazione_residenti", "nome": "Popolazione residente al 1° gennaio, per sesso (ISTAT)",
@@ -67,7 +68,8 @@ TAVOLE = [
      "filtri": {"CITIZENSHIP": {"TOTAL"}}},
     {"codice": "popolazione_bilancio", "nome": "Bilancio demografico di Varese: saldo naturale e migratorio estero (ISTAT)",
      "dataflow": "IT1,22_315_DF_DCIS_POPORESBIL1_1,1.0", "tipi": set(BILANCIO), "territori": {"ITC41"},
-     "chiave": f"A.ITC41.{'+'.join(BILANCIO)}.9", "inizio": 2019},
+     "chiave": f"A.ITC41.{'+'.join(BILANCIO)}.9", "inizio": 2019,
+     "colonne": COLONNE_BILANCIO, "indispensabili": ["REF_AREA", "DATA_TYPE", "SEX", "TIME_PERIOD", "OBS_VALUE"]},
     {"codice": "popolazione_indici", "nome": "Indicatori demografici (ISTAT)",
      "dataflow": "IT1,22_293_DF_DCIS_INDDEMOG1_1,1.0", "tipi": set(INDICI), "territori": set(TRE_AREE),
      "chiave": f"A.{'+'.join(TRE_AREE)}.{'+'.join(INDICI)}", "inizio": ANNO_INIZIO,
