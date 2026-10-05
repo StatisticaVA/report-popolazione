@@ -1,0 +1,8 @@
+{
+ "popolazione_residenti.csv": "https://esploradati.istat.it/SDMXWS/rest/data/IT1,22_289_DF_DCIS_POPRES1_1,1.0/A.IT+ITC4+ITC41+ITC42+ITC44+ITC45+ITC46+ITC47+ITC48+ITC4A+ITC4B+ITC43+ITC49+IT108.JAN.1+2+9.TOTAL.99?startPeriod=2019&endPeriod=2026&format=csvfile",
+ "popolazione_eta.csv": "https://esploradati.istat.it/SDMXWS/rest/data/IT1,22_289_DF_DCIS_POPRES1_1,1.0/A.ITC41.JAN.9..99?startPeriod=2019&endPeriod=2026&format=csvfile",
+ "popolazione_stranieri.csv": "https://esploradati.istat.it/SDMXWS/rest/data/IT1,29_7_DF_DCIS_POPSTRRES1_1,1.0/A.IT+ITC4+ITC41.JAN.9.?startPeriod=2019&endPeriod=2026&format=csvfile",
+ "popolazione_serie_storica.csv": "https://esploradati.istat.it/SDMXWS/rest/data/IT1,164_164_DF_DCIS_RICPOPRES2011_1,1.0/A.ITC41.JAN.TOTAL.9.TOTAL?startPeriod=2002&endPeriod=2019&format=csvfile",
+ "popolazione_bilancio.csv": "https://esploradati.istat.it/SDMXWS/rest/data/IT1,22_315_DF_DCIS_POPORESBIL1_1,1.0/A.ITC41.NTGROW_REGOF+INTERTNMIG_REGOF+TOTAL_BAL.9?startPeriod=2019&endPeriod=2026&format=csvfile",
+ "popolazione_indici.csv": "https://esploradati.istat.it/SDMXWS/rest/data/IT1,22_293_DF_DCIS_INDDEMOG1_1,1.0/A.IT+ITC4+ITC41.TFR+LIFEEXP0M+LIFEEXP0F+DEPENDRATE+OLDAGEDEPR+AGEINDEX+MEANAGEP?startPeriod=2018&endPeriod=2026&format=csvfile"
+}
