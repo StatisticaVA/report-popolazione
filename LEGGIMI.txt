@@ -1,0 +1,60 @@
+REPORT POPOLAZIONE – ISTAT (Varese · Lombardia · Italia)
+=========================================================
+Versione 1.0 – 05/10/2026. Sito separato dagli altri (import/export, imprese, credito, lavoro), con il logo della Camera di Commercio di Varese.
+
+A COSA SERVE
+Crea le 6 tabelle Excel per Osserva sulla popolazione residente, con i dati ISTAT (IstatData):
+- popolazione residente al 1° gennaio per sesso, età e cittadinanza (province, regioni, Italia);
+- popolazione straniera residente;
+- bilancio demografico (nati, morti, saldo migratorio);
+- indicatori demografici (figli per donna, speranza di vita, indici di dipendenza e di vecchiaia, età media).
+Non serve installare niente: è una pagina web che funziona nel browser (Chrome, Edge, Firefox, Safari).
+
+COME SI USA (una volta all'anno, quando ISTAT pubblica i dati: di solito verso la fine di marzo)
+1. Apri la pagina (sito pubblicato oppure doppio clic su index.html).
+2. Guarda il riquadro «2 · Dati ISTAT»:
+   - se è VERDE («Dati automatici: popolazione residente fino al 1° gennaio 2026…») i dati sono già caricati, non devi fare niente;
+   - se è ARANCIONE, oppure l'ultimo anno indicato è vecchio (ISTAT ha pubblicato ma i dati automatici non sono ancora arrivati):
+       a) clicca i sei pulsanti di scarico: il browser salva sei file .csv nella cartella Download;
+       b) trascina i sei file nel riquadro tratteggiato (o clicca il riquadro e scegli i file). Non serve aprirli.
+3. Scegli l'anno del 1° gennaio (la pagina propone da sola l'ultimo disponibile).
+4. Nel riquadro «3 · Controllo e tabelle» controlla che le 6 tabelle siano «pronte» e premi «Genera tabelle».
+5. Scarica i file uno per uno oppure tutti insieme con «Scarica tutto (ZIP)».
+
+TABELLE PRODOTTE (nomi, fogli, intestazioni e formati come i modelli di Osserva del 2026, in formato .xlsx)
+- Popolazione_sintesi.xlsx          Varese, Lombardia, Italia: maschi, femmine, totale, stranieri e densità abitativa, anno scelto e anno prima, con variazione % e peso %
+- Popolazione_caratteristiche.xlsx  Varese: genere, nazionalità, classi d'età (0-14, 15-64, 65 e oltre) e stranieri per età, con variazione % e peso %
+- Popolazione_territori.xlsx        12 province, Lombardia, Italia: popolazione, variazione % e peso % sulla Lombardia (riga «Italia*»: peso della Lombardia sull'Italia)
+- Popolazione_tempo.xlsx            popolazione di Varese al 1° gennaio negli ultimi 15 anni, con variazione %
+- Popolazione_saldi.xlsx            saldo naturale, saldo migratorio e per altri motivi, di cui estero, saldo totale di Varese (dal 2019)
+- Popolazione_indici.xlsx           indicatori demografici di Varese, Lombardia e Italia dal 2018 (foglio «Foglio2», come il modello)
+Le percentuali non sono arrotondate (il formato mostra 2 decimali), come nei modelli. I numeri sono salvati come numeri veri (non testo).
+Densità abitativa = popolazione / superficie (Varese 1.198 kmq, Lombardia 23.844 kmq, Italia 301.338 kmq: le cifre del foglio di lavoro).
+
+COSA SA FARE DA SOLA (rispetto al foglio di lavoro a mano)
+- Il dato dell'ultimo 1° gennaio è PROVVISORIO per ISTAT; l'anno dopo diventa definitivo. Siccome i dati vengono riscaricati ogni volta,
+  l'anno precedente è già quello definitivo: non serve «correggere l'anno precedente» a mano.
+- Il saldo totale è la variazione della popolazione fra due 1° gennaio; il saldo migratorio e per altri motivi è saldo totale meno saldo naturale
+  (come nel modello); il saldo naturale e il saldo migratorio estero sono quelli del bilancio demografico ISTAT.
+- Gli indicatori dell'ultimo anno (figli per donna, speranza di vita) escono dopo: nelle tabelle le celle restano vuote, come nel modello.
+
+DIFFERENZE RISPETTO ALLE TABELLE DI OSSERVA (vedi HANDOVER §27)
+- Saldi 2018–2021: ISTAT ha ricalcolato quegli anni dopo il censimento, i valori attuali sono diversi da quelli scritti a mano nel 2026;
+  la tabella parte dal 2019 con i valori ISTAT attuali (scelta dell'utente 05/10/2026).
+- Indicatori: l'anno scorso era provvisorio, ora ISTAT lo ha rivisto (es. indice di vecchiaia di Varese 2025: 207,6 invece di 207,9);
+  il 2021 ha le cifre di ISTAT a 1 decimale (nel foglio di lavoro erano calcolate con più decimali).
+
+AGGIORNAMENTO AUTOMATICO DEI DATI
+ISTAT non permette a una pagina web di scaricare i dati da sola. Per questo c'è un aggiornamento automatico su GitHub
+(.github/workflows/aggiorna-dati.yml, ogni lunedì): scarica i dati da ISTAT, controlla che siano quelli attesi e li salva nella cartella dati/.
+La pagina legge i dati da lì. Se qualcosa non funziona (ISTAT non risponde, tavola cambiata) arriva un'e-mail con la spiegazione;
+se ISTAT non ha pubblicato dati nuovi non arriva niente.
+Si può lanciare a mano: GitHub → scheda «Actions» → «Aggiorna dati ISTAT» → «Run workflow».
+
+FILE
+index.html                         la pagina (motore + interfaccia, un solo file, senza librerie esterne)
+LEGGIMI.txt                        queste istruzioni
+aggiorna_dati.py                   scarica e controlla i dati ISTAT (solo libreria standard di Python)
+segnala_problemi.py                avviso per e-mail se l'aggiornamento non riesce
+.github/workflows/aggiorna-dati.yml  il controllo automatico del lunedì
+dati/*.csv, dati/aggiornamento.json  i dati scaricati (6 tavole) e la data dell'ultimo controllo
